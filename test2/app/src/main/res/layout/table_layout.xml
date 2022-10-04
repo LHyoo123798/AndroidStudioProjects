@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+    <TableRow>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Open..."
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-O"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow >
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Save..."
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-S"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Save as..."
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-Shirt-S"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+    </TableRow>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        />
+
+    <TableRow>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Import..."
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </TableRow>
+
+    <TableRow >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Export..."
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-E"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+    </TableRow>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        />
+
+    <TableRow>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Quit"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </TableRow>
+</TableLayout>
