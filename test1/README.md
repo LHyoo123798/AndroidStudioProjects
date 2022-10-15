@@ -1,6 +1,6 @@
 ## 实验一
-![image](/TestImage/test1.png) 
-### activity_main.xml
+### 效果图![image](/TestImage/test1.png) 
+### 代码：activity_main.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

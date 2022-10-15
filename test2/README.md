@@ -1,7 +1,7 @@
 ## 实验二
 ### 线性布局
-![image](/TestImage/test2_1.png)
-#### linear_layout.xml
+####  效果图 ![image](/TestImage/test2_1.png)
+#### 代码：linear_layout.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -219,8 +219,8 @@
 ```
 
 ### 表格布局
-![image](/TestImage/test2_2.png)
-#### table_layout.xml
+#### 效果图![image](/TestImage/test2_2.png)
+#### 代码：table_layout.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -383,8 +383,8 @@
 ```
 
 ### 约束布局1
-![image](/TestImage/test2_3.png)
-#### constrant_layout.xml
+#### 效果图![image](/TestImage/test2_3.png)
+#### 代码：constrant_layout.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -620,8 +620,8 @@
 ```
 
 ### 约束布局2
-![image](/TestImage/test2_4.png)
-#### constrant_layout.xml
+#### 效果图![image](/TestImage/test2_4.png)
+#### 代码：constrant_layout.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
