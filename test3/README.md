@@ -1,10 +1,10 @@
 ## 实验三
 
 ### 项目结构
-![image](/TestImage/test3_project_structure.png)
+![image](/TestImage/test3_projectStructure.png)
 
 ### 实验1、4效果图
-![image](/TestImage/test3_1&4.png)
+![image](/TestImage/test3_1&&4.png)
 ### 主要代码
 #### activity_main.xml
 ```
@@ -158,9 +158,9 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 ### 实验2、3效果图
-![image](/TestImage/test3_2&3%281%29.png)
-![image](/TestImage/test3_2&3%282%29.png)
-![image](/TestImage/test3_2&3%283%29.png)
+![image](/TestImage/test3_2&&3%281%29.png)
+![image](/TestImage/test3_2&&3%282%29.png)
+![image](/TestImage/test3_2&&3%283%29.png)
 ### 主要代码
 #### menu_demo.xml
 ```
