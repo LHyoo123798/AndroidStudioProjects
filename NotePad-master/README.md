@@ -309,7 +309,6 @@ public class NoteSearch extends Activity implements SearchView.OnQueryTextListen
 
 ### 功能四:更换背景色
 ![image](/TestImage/notepad_background1.png)
-![image](/TestImage/notepad_background2.png)
 #### AndroidManifest.xml
 ```
         <!--Change background color-->
@@ -485,5 +484,138 @@ public class NoteColor extends Activity {
     }
 
 }
+
+```
+
+### 功能五:美化UI
+![image](/TestImage/notepad_UI1.png)
+#### AndroidManifest.xml
+```
+    <activity android:name="NotesList" android:label="@string/title_notes_list"
+              android:theme="@android:style/Theme.Holo.Light">
+
+```
+#### NotePad.java
+```
+    public static final String COLUMN_NAME_BACK_COLOR = "color";
+```
+#### NotePad.java
+```
+        public static final int DEFAULT_COLOR = 0; //white
+        public static final int YELLOW_COLOR = 1; //yellow
+        public static final int BLUE_COLOR = 2; //blue
+        public static final int GREEN_COLOR = 3; //green
+        public static final int RED_COLOR = 4; //red
+```
+#### NotePadProvider.java
+```
+       public void onCreate(SQLiteDatabase db) {
+           db.execSQL("CREATE TABLE " + NotePad.Notes.TABLE_NAME + "   ("
+                   + NotePad.Notes._ID + " INTEGER PRIMARY KEY,"
+                   + NotePad.Notes.COLUMN_NAME_TITLE + " TEXT,"
+                   + NotePad.Notes.COLUMN_NAME_NOTE + " TEXT,"
+                   + NotePad.Notes.COLUMN_NAME_CREATE_DATE + " INTEGER,"
+                   + NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE + " INTEGER,"
+                   + NotePad.Notes.COLUMN_NAME_BACK_COLOR + " INTEGER" //color
+                   + ");");
+       }
+
+```
+#### NotePadProvider.java
+static
+```
+        sNotesProjectionMap.put(
+                NotePad.Notes.COLUMN_NAME_BACK_COLOR,
+                NotePad.Notes.COLUMN_NAME_BACK_COLOR);
+```
+insert方法
+```
+        // Create a new notepad. The background is white by default
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_BACK_COLOR) == false) {
+            values.put(NotePad.Notes.COLUMN_NAME_BACK_COLOR, NotePad.Notes.DEFAULT_COLOR);
+        }
+
+```
+#### MyCursorAdapter.java
+```
+package com.example.android.notepad;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.graphics.Color;
+import android.view.View;
+import android.widget.SimpleCursorAdapter;
+
+public class MyCursorAdapter extends SimpleCursorAdapter {
+    public MyCursorAdapter(Context context, int layout, Cursor c,
+                           String[] from, int[] to) {
+        super(context, layout, c, from, to);
+    }
+    @Override
+    public void bindView(View view, Context context, Cursor cursor){
+        super.bindView(view, context, cursor);
+        //Get the color data corresponding to the note list from the cursor read from the database, and set the note color
+        int x = cursor.getInt(cursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_BACK_COLOR));
+        /**
+         * white 255 255 255
+         * yellow 247 216 133
+         * blue 165 202 237
+         * green 161 214 174
+         * red 244 149 133
+         */
+        switch (x){
+            case NotePad.Notes.DEFAULT_COLOR:
+                view.setBackgroundColor(Color.rgb(255, 255, 255));
+                break;
+            case NotePad.Notes.YELLOW_COLOR:
+                view.setBackgroundColor(Color.rgb(247, 216, 133));
+                break;
+            case NotePad.Notes.BLUE_COLOR:
+                view.setBackgroundColor(Color.rgb(165, 202, 237));
+                break;
+            case NotePad.Notes.GREEN_COLOR:
+                view.setBackgroundColor(Color.rgb(161, 214, 174));
+                break;
+            case NotePad.Notes.RED_COLOR:
+                view.setBackgroundColor(Color.rgb(244, 149, 133));
+                break;
+            default:
+                view.setBackgroundColor(Color.rgb(255, 255, 255));
+                break;
+        }
+    }
+}
+
+```
+#### NotesList.java中PROJECTION
+```
+    private static final String[] PROJECTION = new String[] {
+            NotePad.Notes._ID, // 0
+            NotePad.Notes.COLUMN_NAME_TITLE, // 1
+            //Extended:display time, color
+            NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, // 2
+            NotePad.Notes.COLUMN_NAME_BACK_COLOR
+    };
+
+```
+#### NotesList.java中SimpleCursorAdapter改为MyCursorAdapter
+```
+//        // Creates the backing adapter for the ListView.
+//        SimpleCursorAdapter adapter
+//            = new SimpleCursorAdapter(
+//                      this,                             // The Context for the ListView
+//                      R.layout.noteslist_item,          // Points to the XML for a list item
+//                      cursor,                           // The cursor to get items from
+//                      dataColumns,
+//                      viewIDs
+//              );
+        //Modify to a custom adapter that can be filled with color. The custom code is in MyCursorAdapter.java
+        MyCursorAdapter adapter = new MyCursorAdapter(
+                this,
+                R.layout.noteslist_item,
+                cursor,
+                dataColumns,
+                viewIDs
+        );
 
 ```
