@@ -1,9 +1,9 @@
 ## 期中实验
 
-### 项目结构
+### <font face="微软雅黑" color=red>项目结构</font>
 ![image](/TestImage/notepad_project_structure.png)
 
-### 功能一：时间戳
+### <font face="微软雅黑" color=red>功能一：时间戳</font>
 ![image](/TestImage/notepad_time_stamp.png)
 #### noteslist_item.xml
 ```
@@ -83,7 +83,7 @@
     values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, format);
 ```
 
-### 功能二:笔记查询
+### <font face="微软雅黑" color=red>功能二:笔记查询</font>
 ![image](/TestImage/notepad_query1.png)
 ![image](/TestImage/notepad_query2.png)
 #### AndroidManifest.xml
@@ -217,7 +217,7 @@ public class NoteSearch extends Activity implements SearchView.OnQueryTextListen
 }
 ```
 
-### 功能三：笔记排序
+### <font face="微软雅黑" color=red>功能三：笔记排序</font>
 ![image](/TestImage/notepad_sort1.png)
 ![image](/TestImage/notepad_sort2.png)
 ![image](/TestImage/notepad_sort3.png)
@@ -307,7 +307,7 @@ public class NoteSearch extends Activity implements SearchView.OnQueryTextListen
     private int[] viewIDs = { android.R.id.text1 , R.id.text2 };
 ```
 
-### 功能四:更换背景色
+### <font face="微软雅黑" color=red>功能四:更换背景色</font>
 ![image](/TestImage/notepad_background1.png)
 #### AndroidManifest.xml
 ```
@@ -487,7 +487,7 @@ public class NoteColor extends Activity {
 
 ```
 
-### 功能五:美化UI
+### <font face="微软雅黑" color=red>功能五:美化UI</font>
 ![image](/TestImage/notepad_UI1.png)
 #### AndroidManifest.xml
 ```
